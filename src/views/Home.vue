@@ -6,6 +6,11 @@
         v-for="i in 10"
         :label="i" :value="i"></my-option>
     </my-select>
+    <my-select v-model="value" :clearable="true">
+      <my-option
+        v-for="i in 10"
+        :label="i" :value="i"></my-option>
+    </my-select>
   </div>
 </template>
 
@@ -17,6 +22,11 @@
       return {
         value: ''
       }
+    },
+    mounted() {
+      document.addEventListener('click', (e) => {
+        console.log('select')
+      })
     }
   }
 </script>

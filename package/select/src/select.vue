@@ -46,6 +46,7 @@
 <script>
   import Popper from '../../../src/utils/popper.js'
   import Clickoutside from '../../../src/utils/clickoutside';
+  import {on} from '../../../src/utils/dom';
 
   export default {
     name: 'my-select',
@@ -147,6 +148,9 @@
         this.resetInputWidth()
       })
       this.setSelected()
+      on(document, 'click', () => {
+
+      })
     }
   }
 </script>
